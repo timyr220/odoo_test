@@ -1,0 +1,23 @@
+<odoo>
+    <data>
+        <record id="view_lunch_product_form_inherit" model="ir.ui.view">
+            <field name="name">lunch.product.form.inherit.ingredients</field>
+            <field name="model">lunch.product</field>
+            <!-- обратим внимание, у стандартного lunch есть lunch_product_view_form -->
+            <field name="inherit_id" ref="lunch.lunch_product_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//sheet" position="inside">
+                    <group string="Ingredients">
+                        <field name="ingredient_line_ids">
+                            <tree editable="bottom">
+                                <field name="ingredient_name"/>
+                                <field name="quantity"/>
+                                <field name="uom"/>
+                            </tree>
+                        </field>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,31 @@
+<odoo>
+    <data>
+        <record id="view_lunch_ingredient_line_form" model="ir.ui.view">
+            <field name="name">lunch.ingredient.line.form</field>
+            <field name="model">lunch.ingredient.line</field>
+            <field name="arch" type="xml">
+                <form string="Ingredient">
+                    <sheet>
+                        <group>
+                            <field name="ingredient_name"/>
+                            <field name="quantity"/>
+                            <field name="uom"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_lunch_ingredient_line_tree" model="ir.ui.view">
+            <field name="name">lunch.ingredient.line.tree</field>
+            <field name="model">lunch.ingredient.line</field>
+            <field name="arch" type="xml">
+                <tree string="Ingredients">
+                    <field name="ingredient_name"/>
+                    <field name="quantity"/>
+                    <field name="uom"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,13 @@
+<odoo>
+    <data>
+        <report
+            id="lunch_order_report"
+            model="lunch.order.wizard"
+            string="Lunch Orders"
+            report_type="qweb-pdf"
+            name="lunch_recipe.lunch_order_template"
+            file="lunch_recipe.lunch_order_template"
+            print_report_name="'Lunch Orders: %s - %s' % (object.date_from, object.date_to)"
+        />
+    </data>
+</odoo>
